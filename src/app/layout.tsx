@@ -1,8 +1,7 @@
+import Image from "next/image";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { inter } from "@/config/fonts";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +15,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Image
+          src={'/bg-cafe.jpg'}
+          alt="background-coffee-image"
+          width={2560}
+          height={600}
+          priority
+          className="w-full h-[300px] object-cover absolute top-0 left-0 -z-10"
+        />
+        {children}
+      </body>
     </html>
   );
 }
