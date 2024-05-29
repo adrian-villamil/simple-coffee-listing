@@ -5,7 +5,7 @@ export default async function HomePage() {
   const coffees = await getCoffees();
 
   return (
-    <main className="bg-light-black rounded-xl py-20 max-w-screen-lg mx-auto mt-[150px]">
+    <main className="bg-light-black rounded-xl py-20 max-w-screen-lg mx-auto mt-[150px] mb-32">
       <Header />
       <Tabs defaultValue="Tab 1">
         <TabList>
