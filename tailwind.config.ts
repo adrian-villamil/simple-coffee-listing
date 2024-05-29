@@ -14,19 +14,20 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       fontSize: {
-        '3xl': '2rem',
+        'heading': '2rem',
+        '2xs': '0.625rem',
       },
       colors: {
         'white': '#FEF7EE',
         'gray': '#6F757C',
         'black': '#111315',
+        'carrot': '#ED735D',
       },
       backgroundColor: {
         'dark-black': '#111315',
         'light-black': '#1B1D1F',
         'gold': '#F6C768',
         'lime': '#BEE3CC',
-        'carrot': '#ED735D',
       }
     },
   },
