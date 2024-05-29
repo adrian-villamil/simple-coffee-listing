@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { Metadata } from "next";
-import { inter } from "@/config/fonts";
+import { dmSans } from "@/config/fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={dmSans.className}>
         <Image
           src={'/bg-cafe.jpg'}
           alt="background-coffee-image"
