@@ -28,6 +28,11 @@ const config: Config = {
         'light-black': '#1B1D1F',
         'gold': '#F6C768',
         'lime': '#BEE3CC',
+      },
+      gridTemplateColumns: {
+        'min-1': 'repeat(1, minmax(0, min-content))',
+        'min-2': 'repeat(2, minmax(0, min-content))',
+        'min-3': 'repeat(3, minmax(0, min-content))',
       }
     },
   },

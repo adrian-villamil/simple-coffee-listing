@@ -7,14 +7,14 @@ interface Props {
 
 export const CardItem = ({ coffee }: Props) => {
   return (
-    <div className="flex flex-col gap-4 relative">
+    <div className="flex flex-col gap-4 relative w-[260px]">
       {/* Image - Status */}
       <Image
         src={coffee.image}
         alt={coffee.name}
         width={260}
         height={160}
-        className="rounded-xl"
+        className="rounded-xl w-full"
       />
       {coffee.popular && (
         <span className="px-3 py-1 rounded-xl bg-gold text-black text-2xs font-bold absolute top-2 left-2">Popular</span>
