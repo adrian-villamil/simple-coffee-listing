@@ -1,9 +1,24 @@
-import { Header } from "@/components";
+import { getCoffees } from "@/actions/coffee/get-coffees";
+import { CardGrid, Header, TabContent, TabItem, TabList, Tabs } from "@/components";
 
-export default function HomePage() {
+export default async function HomePage() {
+  const coffees = await getCoffees();
+
   return (
-    <main className="bg-light-black rounded-xl py-20 px-28 w-11/12 mx-auto mt-[150px]">
+    <main className="bg-light-black rounded-xl py-20 max-w-screen-lg mx-auto mt-[150px]">
       <Header />
+      <Tabs defaultValue="Tab 1">
+        <TabList>
+          <TabItem value="Tab 1">All Products</TabItem>
+          <TabItem value="Tab 2">Availabel Now</TabItem>
+        </TabList>
+        <TabContent value="Tab 1">
+          <CardGrid coffees={coffees} />
+        </TabContent>
+        <TabContent value="Tab 2">
+          <CardGrid coffees={coffees.filter((coffee) => coffee.available)} />
+        </TabContent>
+      </Tabs>
     </main>
   );
 }
