@@ -1,8 +1,7 @@
 'use client';
 
 import { useContext } from "react";
-import { dmSans } from "@/config/fonts"
-import clsx from "clsx"
+import clsx from "clsx";
 import { TabsContext } from "./Tabs";
 
 interface Props {
@@ -16,7 +15,6 @@ export const TabItem = ({ value, children }: Props) => {
   return (
     <button
       className={clsx(
-        dmSans.className,
         'rounded-lg py-2 px-3 text-sm text-white font-medium',
         { 'bg-gray': activeTab === value }
       )}
