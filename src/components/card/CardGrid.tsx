@@ -9,7 +9,7 @@ export const CardGrid = ({ coffees }: Props) => {
   return (
     <div className="grid justify-center gap-x-8 gap-y-16 grid-cols-min-1 lg:grid-cols-min-2 xl:grid-cols-min-3">
       {coffees.map((coffee) => (
-        <CardItem coffee={coffee} />
+        <CardItem key={coffee.id} coffee={coffee} />
       ))}
     </div>
   )
