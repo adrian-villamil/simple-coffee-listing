@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 interface Props {
   defaultValue: string;
@@ -17,6 +17,8 @@ export const TabsContext = createContext<{
 
 export const Tabs = ({ defaultValue, children }: Props) => {
   const [activeTab, setActiveTab] = useState(defaultValue);
+
+  useEffect(() => setActiveTab(defaultValue), [defaultValue]);
 
   const handleChange = (newValue: string) => {
     setActiveTab(newValue);
