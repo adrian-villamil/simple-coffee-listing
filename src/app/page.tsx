@@ -6,7 +6,7 @@ export default async function HomePage() {
   const availableCoffees = allCoffees.filter((coffee) => coffee.available);
 
   return (
-    <main className="bg-light-black rounded-xl py-20 max-w-[1100px] mx-auto mt-[150px] mb-32">
+    <main className="bg-light-black rounded-xl pb-20 max-w-[390px] lg:max-w-[710px] xl:max-w-[1100px] mx-auto mt-[162px] mb-32 overflow-hidden">
       <Header />
       <Tabs defaultValue="all products">
         <TabList>
