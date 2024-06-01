@@ -11,7 +11,7 @@ export default async function HomePage() {
       <Tabs defaultValue="all products">
         <TabList>
           <TabItem value="all products">All Products</TabItem>
-          <TabItem value="available now">Availabel Now</TabItem>
+          <TabItem value="available now">Available Now</TabItem>
         </TabList>
         <TabContent value="all products">
           <CardGrid coffees={allCoffees} />
